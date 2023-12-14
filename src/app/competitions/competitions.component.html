@@ -1,0 +1,173 @@
+<section class="competitions-section">
+  <div class="header-section">
+    <div class="top-section">
+      <div class="avatar-group">
+        <ng-container *ngFor="let competition of competitions; let i = index">
+          <!-- Only show the first three avatars, for example -->
+          <img *ngIf="i < 3" [src]="competition.profileImage" [alt]="competition.name" class="avatar">
+        </ng-container>
+        <!-- If there are more than three competitions, show the participant count -->
+        <span *ngIf="competitions.length > 2" class="participant-count">{{competitions.length}}</span>
+      </div>
+      <span class="join-message">Too late to join</span>
+    </div>
+    <h3>Weekly Challenges</h3>
+  </div>
+  <div *ngFor="let competition of competitions" class="competition-card" 
+  [ngStyle]="{
+    'background': competition.profit.startsWith('+') 
+      ? 'linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(12, 38, 25, 1) 100%)' 
+      : 'linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(38, 16, 16, 1) 100%)'
+  }">
+    <img class="rank-badge" [src]="competition.rank" alt="Rank">
+    <img class="profile-image" [src]="competition.profileImage" alt="{{ competition.name }}">
+    <div class="competitor-details">
+      <h3>{{ competition.name }}
+    <img *ngIf="competition.profit.startsWith('+')" src="/assets/icons/check.png" alt="Profit" class="profit-icon">
+  </h3>
+      <div class="stats">
+        <div class="stats-item">
+          <span class="stats-value">{{ competition.alerts }}</span>
+          <span class="stats-label">Alerts</span>
+        </div>
+        <div class="stats-item">
+          <span class="stats-value">{{ competition.winRate }}%</span>
+          <span class="stats-label">Win Rate</span>
+        </div>
+        <div class="stats-item">
+          <span class="stats-value">{{ competition.yield }}%</span>
+          <span class="stats-label">Yield</span>
+        </div>
+
+        <div class="competitor-stats">
+          <p [class.profit-positive]="competition.profit.startsWith('+')" [class.profit-negative]="competition.profit.startsWith('-')">
+            <span class="profit">{{ competition.profit }}</span>
+            <span class="stats-percentage">{{ competition.percentage }}%</span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="competitions-bottom">
+    <div class="top-details">
+      <div class="organizer">
+        <img class="organizer-avatar" src="/assets/icons/rogerk-avatar.png" alt="Roger K">
+      <span class="organizer-info">
+        <span class="organizer-name">Roger K</span>
+        <span class="organizer-nick">&#64;rog13k</span>
+      </span>
+      </div>
+      <div class="prize-details">
+        <div class="icon-wrapper">
+          <img src="/assets/icons/x.svg" alt="x" class="x-icon">
+        </div>
+        <div class="prize-info">
+          <span class="prize-amount">20,000</span>
+          <span class="prize-label">&#64;xBit prize</span>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="time-details">
+        <div class="days-circle">
+          <span class="days-number">3</span>
+        </div>
+        <div class="days-text">
+          <span>Days</span>
+          <span>past</span>
+        </div>
+      </div>
+    </div>
+    <div class="view-button-container">
+      <button class="view-button">VIEW</button>
+    </div>
+  </div>
+</section>
+
+<section class="competitions-section">
+  <div class="header-section">
+    <div class="top-section">
+      <div class="avatar-group">
+        <ng-container *ngFor="let competition of competitions; let i = index">
+          <!-- Only show the first three avatars, for example -->
+          <img *ngIf="i < 3" [src]="competition.profileImage" [alt]="competition.name" class="avatar">
+        </ng-container>
+        <!-- If there are more than three competitions, show the participant count -->
+        <span *ngIf="competitions.length > 2" class="participant-count">{{competitions.length}}</span>
+      </div>
+      <span class="join-message">Too late to join</span>
+    </div>
+    <h3>Weekly Challenges</h3>
+  </div>
+  <div *ngFor="let competition of competitions" class="competition-card" 
+  [ngStyle]="{
+    'background': competition.profit.startsWith('+') 
+      ? 'linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(12, 38, 25, 1) 100%)' 
+      : 'linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(38, 16, 16, 1) 100%)'
+  }">
+    <img class="rank-badge" [src]="competition.rank" alt="Rank">
+    <img class="profile-image" [src]="competition.profileImage" alt="{{ competition.name }}">
+    <div class="competitor-details">
+      <h3>{{ competition.name }}
+    <img *ngIf="competition.profit.startsWith('+')" src="/assets/icons/check.png" alt="Profit" class="profit-icon">
+  </h3>
+      <div class="stats">
+        <div class="stats-item">
+          <span class="stats-value">{{ competition.alerts }}</span>
+          <span class="stats-label">Alerts</span>
+        </div>
+        <div class="stats-item">
+          <span class="stats-value">{{ competition.winRate }}%</span>
+          <span class="stats-label">Win Rate</span>
+        </div>
+        <div class="stats-item">
+          <span class="stats-value">{{ competition.yield }}%</span>
+          <span class="stats-label">Yield</span>
+        </div>
+
+        <div class="competitor-stats">
+          <p [class.profit-positive]="competition.profit.startsWith('+')" [class.profit-negative]="competition.profit.startsWith('-')">
+            <span class="profit">{{ competition.profit }}</span>
+            <span class="stats-percentage">{{ competition.percentage }}%</span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="competitions-bottom">
+    <div class="top-details">
+      <div class="organizer">
+        <img class="organizer-avatar" src="/assets/icons/rogerk-avatar.png" alt="Roger K">
+      <span class="organizer-info">
+        <span class="organizer-name">Roger K</span>
+        <span class="organizer-nick">&#64;rog13k</span>
+      </span>
+      </div>
+      <div class="prize-details">
+        <div class="icon-wrapper">
+          <img src="/assets/icons/x.svg" alt="x" class="x-icon">
+        </div>
+        <div class="prize-info">
+          <span class="prize-amount">20,000</span>
+          <span class="prize-label">&#64;xBit Prize</span>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="time-details">
+        <div class="days-circle">
+          <span class="days-number">3</span>
+        </div>
+        <div class="days-text">
+          <span>Days</span>
+          <span>past</span>
+        </div>
+      </div>
+    </div>
+    <div class="view-button-container">
+      <button class="view-button">VIEW</button>
+    </div>
+  </div>
+</section>

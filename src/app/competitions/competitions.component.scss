@@ -1,0 +1,291 @@
+/* competitions.component.scss */
+.competitions-section {
+  margin: 0px 20px;
+  background: linear-gradient(rgb(20,23,25), rgb(20,23,25));
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid rgb(55,58,60);
+  border-radius: 5%;
+  color: white;
+}
+
+.header-section {
+  position: relative;
+  color: #aaa;
+  margin-bottom: 16px; /* Space between header and cards */
+
+  .top-section {
+    display: flex;
+  }
+  
+  .avatar-group {
+    display: flex;
+    align-items: center;
+    
+    .avatar {
+      border-radius: 50%; /* Circular avatars */
+      margin-right: -10px; /* Overlap avatars */
+      border: 2px solid white;
+      width: 16px; 
+      height: 16px; /* Adjust as per your design */
+    }
+    
+    .participant-count {
+      border-radius: 50%;
+      background-color: rgb(50,50,50);
+      width: 20px; /* Adjust as per your design */
+      height: 20px; /* Adjust as per your design */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white; /* Text color */
+      font-size: 0.8rem; /* Adjust as per your design */
+      margin-left: 10px; /* Adjust as per your design */
+    }
+  }
+  
+  .join-message {
+    font-size: 0.6rem;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+}
+
+.competition-card {
+  background: #000; /* Solid color for now */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding-top: 8px;
+  padding-right: 8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  position: relative;
+
+  .rank-badge {
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .profile-image {
+    margin-left: 24px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .competitor-details {
+    flex-grow: 1;
+    color: white;
+
+    h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 1rem; /* Adjust as needed */
+      margin-bottom: 0px;
+      display: flex;
+      align-items: center;
+
+      .profit-icon {
+        margin-left: 8px; /* Adjust the margin as needed */
+      }
+    }
+
+    .stats {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      display: flex;
+      flex-direction: row;
+
+      .stats-item {
+        margin-right: 24px; /* Adjust spacing as needed */
+
+        .stats-value {
+          font-size: 0.8rem; /* Adjust as needed */
+          color: #fff; /* White text for value */
+        }
+
+        .stats-label {
+          font-size: 0.6rem; /* Adjust as needed */
+          color: #aaa; /* Grey text for label */
+          display: block; /* Make label display on new line */
+        }
+      }
+    }
+  }
+
+  .competitor-stats {
+    p {
+      font-size: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    .stats-percentage {
+      font-size: 0.8rem; /* Adjust as needed */
+    }
+  
+    .profit-positive {
+      color: rgb(136,255,199); /* Green for positive profit */
+    }
+  
+    .profit-negative {
+      color: rgb(241,104,104); /* Red for negative profit */
+    }
+  }
+}
+
+.competitions-bottom {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 10px 10px;
+  color: #ffffff; // adjust as needed
+
+
+  .top-details {
+    display: flex;
+    justify-content: space-between; /* This will push the time details to the right */
+    align-items: center;
+    .organizer {
+      display: flex;
+      align-items: center;
+      font-size: 0.6rem;
+  
+      .organizer-avatar {
+        width: 24px; // adjust as needed
+        height: 24px; // adjust as needed
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+  
+      .organizer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .organizer-name, .organizer-nick {
+        margin: 0; /* Removes default margin */
+        line-height: 1; /* Reduces the space between lines of text */
+        padding-top: 5px; /* Removes default padding */
+        /* Adjust the font-size if needed to reduce space */
+      }
+  
+      .organizer-name {
+        font-size: 0.8rem;
+      }
+  
+      .organizer-nick {
+        color: #aaa; // adjust as needed
+      }
+    }
+  
+    .prize-details {
+      font-size: 0.6rem;
+      padding: 0px 16px;
+      display: flex;
+      align-items: center;
+  
+      .x-icon {
+        width: 16px; // adjust as needed
+        height: 16px; // adjust as needed
+      }
+  
+      .icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(60,60,60); /* Replace with the specific shade of grey you want */
+        border: 1px solid green; /* Replace with the specific shade of green you want */
+        border-radius: 50%; /* This creates the circle shape */
+        width: 20px; /* Adjust based on the size you need */
+        height: 20px; /* Adjust based on the size you need */
+      }
+  
+      .prize-info {
+        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        margin-left: 8px;
+      }
+  
+      .prize-amount {
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding-bottom: 5px;
+      }
+  
+      .prize-label {
+        color: #aaa; // adjust as needed
+      }
+    }
+  }
+
+  .spacer {
+    flex-grow: 1; /* This will take up all available space */
+  }
+  
+  .time-details {
+    color: rgb(241,104,104);
+    display: flex;
+    align-items: center; /* Align the items vertically */
+    font-size: 0.8rem;
+
+    .days-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid rgb(241,104,104); /* Red border */
+      border-radius: 50%; /* Make it a circle */
+      width: 30px; /* Width of the circle */
+      height: 30px; /* Height of the circle */
+      margin-right: 10px; /* Space between the circle and the text */
+    }
+    
+    .days-text {
+      display: flex;
+      flex-direction: column; /* Stack "Days" and "past" vertically */
+    }
+  }
+  
+  .view-button-container {
+    width: 100%; /* Button width as a percentage of its container */
+    margin-top: 10px; /* Space from the top details */
+    align-self: center; /* Center the button container in the flex column */
+  }
+  
+  .view-button {
+    width: 100%; /* Full width of its container */
+    background-color: rgb(48,50,54);
+    color: white;
+    border: 1px solid rgb(55,58,60);
+    border-radius: 20px;
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: white; // adjust as needed
+      color: blue
+    }
+  }
+}
