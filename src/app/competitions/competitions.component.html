@@ -3,10 +3,8 @@
     <div class="top-section">
       <div class="avatar-group">
         <ng-container *ngFor="let competition of competitions; let i = index">
-          <!-- Only show the first three avatars, for example -->
           <img *ngIf="i < 3" [src]="competition.profileImage" [alt]="competition.name" class="avatar">
         </ng-container>
-        <!-- If there are more than three competitions, show the participant count -->
         <span *ngIf="competitions.length > 2" class="participant-count">{{competitions.length}}</span>
       </div>
       <span class="join-message">Too late to join</span>
@@ -22,9 +20,9 @@
     <img class="rank-badge" [src]="competition.rank" alt="Rank">
     <img class="profile-image" [src]="competition.profileImage" alt="{{ competition.name }}">
     <div class="competitor-details">
-      <h3>{{ competition.name }}
+      <span class="competior-name">{{ competition.name }}
     <img *ngIf="competition.profit.startsWith('+')" src="/assets/icons/check.png" alt="Profit" class="profit-icon">
-  </h3>
+      </span>
       <div class="stats">
         <div class="stats-item">
           <span class="stats-value">{{ competition.alerts }}</span>
@@ -38,14 +36,11 @@
           <span class="stats-value">{{ competition.yield }}%</span>
           <span class="stats-label">Yield</span>
         </div>
-
-        <div class="competitor-stats">
-          <p [class.profit-positive]="competition.profit.startsWith('+')" [class.profit-negative]="competition.profit.startsWith('-')">
-            <span class="profit">{{ competition.profit }}</span>
-            <span class="stats-percentage">{{ competition.percentage }}%</span>
-          </p>
+        <div class="stats-item" [class.profit-positive]="competition.profit.startsWith('+')"
+          [class.profit-negative]="competition.profit.startsWith('-')">
+          <span class="profit">{{ competition.profit }}</span>
+          <span class="stats-percentage">{{ competition.percentage }}%</span>
         </div>
-
       </div>
     </div>
   </div>
@@ -74,7 +69,7 @@
           <span class="days-number">3</span>
         </div>
         <div class="days-text">
-          <span>Days</span>
+          <span class ="days">Days</span>
           <span>past</span>
         </div>
       </div>
@@ -90,15 +85,13 @@
     <div class="top-section">
       <div class="avatar-group">
         <ng-container *ngFor="let competition of competitions; let i = index">
-          <!-- Only show the first three avatars, for example -->
           <img *ngIf="i < 3" [src]="competition.profileImage" [alt]="competition.name" class="avatar">
         </ng-container>
-        <!-- If there are more than three competitions, show the participant count -->
         <span *ngIf="competitions.length > 2" class="participant-count">{{competitions.length}}</span>
       </div>
-      <span class="join-message">Too late to join</span>
+      <img class="join-message icon" src="/assets/icons/create-competition-idle.png" alt="Create">
     </div>
-    <h3>Weekly Challenges</h3>
+    <h3>Double Gain Week Contest</h3>
   </div>
   <div *ngFor="let competition of competitions" class="competition-card" 
   [ngStyle]="{
@@ -109,9 +102,9 @@
     <img class="rank-badge" [src]="competition.rank" alt="Rank">
     <img class="profile-image" [src]="competition.profileImage" alt="{{ competition.name }}">
     <div class="competitor-details">
-      <h3>{{ competition.name }}
+      <span>{{ competition.name }}
     <img *ngIf="competition.profit.startsWith('+')" src="/assets/icons/check.png" alt="Profit" class="profit-icon">
-  </h3>
+      </span>
       <div class="stats">
         <div class="stats-item">
           <span class="stats-value">{{ competition.alerts }}</span>

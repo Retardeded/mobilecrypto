@@ -22,49 +22,41 @@
         padding-left: 8px;
         color: white;
         display: flex;
-        flex-direction: column; // Align items in a row instead of a column
-        align-items: flex-start; // Center items vertically
+        flex-direction: column; 
+        align-items: flex-start;
+        font-size: 0.9rem;
 
         .user-name {
           font-family: 'Poppins', sans-serif;
-          font-size: 1rem; // Change based on your design
-          color: white;
           margin-bottom: 0px
         }
 
         .stats-container {
           display: flex;
           align-items: center;
-          gap: 8px; // This adds space between items in the flex container
+          gap: 4px;
 
           .x-icon,
           .crown-icon {
-            width: 16px; // Adjust to match the design
-            height: 16px; // Adjust to match the design
+            width: 16px;
+            height: 16px;
           }
 
           .user-stats {
-            font-size: 1rem; // Adjust to match the design
-            color: white;
-            margin-bottom: 0px
+            margin: 0px;
+            margin-right: 5px;
           }
         }
       }
     }
 
     .settings-btn {
-      background: none; // Remove any background color
-      border: none; // Remove any border
-      box-shadow: none; // Remove any box shadow
-
-      &:hover {
-        background: none; // Ensure the background remains transparent on hover
-      }
+      background: none; 
+      border: none;
     }
   }
 
   .competitions-title {
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #aaa;
     margin-top: 16px;
