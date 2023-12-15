@@ -1,4 +1,3 @@
-// header.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -10,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  // HeaderComponent logic...
+  
 }

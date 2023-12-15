@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Competition } from './competition.model';
-import { CommonModule } from '@angular/common'; // Import this if you are using common directives
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-competitions',
   standalone: true,
-  imports: [CommonModule], // Add this if you are using common directives like *ngFor
+  imports: [CommonModule],
   templateUrl: './competitions.component.html',
-  styleUrls: ['./competitions.component.scss'] // Correct this line
+  styleUrls: ['./competitions.component.scss']
 })
 export class CompetitionsComponent {
   competitions: Competition[] = [
@@ -47,6 +47,5 @@ export class CompetitionsComponent {
       profileImage: '/assets/icons/ahmad-avatar.png',
       background: 'linear-gradient(147deg, #000000 0%, #504e4e 74%)'
     },
-    // Add more mock data as needed
   ];
 }

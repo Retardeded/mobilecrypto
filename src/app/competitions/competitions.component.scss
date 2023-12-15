@@ -207,15 +207,23 @@
         height: 16px;
       }
   
-      .icon-wrapper {
+      .icon-wrapper-outer {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(60,60,60); 
-        border: 1px solid green;
+        background: linear-gradient(to top, rgb(4,207,234), rgb(4,221,155));
         border-radius: 50%;
-        width: 20px;
-        height: 20px;
+        padding: 0.5px;
+      }
+      
+      .icon-wrapper {
+        background-color: rgb(60,60,60);
+        border-radius: 50%;
+        width: 23px; 
+        height: 23px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
   
       .prize-info {
